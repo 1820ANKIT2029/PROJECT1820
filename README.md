@@ -1,4 +1,4 @@
-#  PROJECT_1820: A Playground for Creative Code ✨
+#  PROJECT_1820✨
 
 ## A Repository for Personal Coding Projects
 
