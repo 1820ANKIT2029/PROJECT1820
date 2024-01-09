@@ -6,7 +6,7 @@ This repository houses a collection of my small-scale coding projects, spanning 
 
 **Current Projects:**
 
-1. **✨ To-Do List App ** 
+**✨ To-Do List App ** 
     - A simple and effective tool for managing tasks and staying organized.
     - Built using [programming language/framework here].
     - Key features: [list key features]
