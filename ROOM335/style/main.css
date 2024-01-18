@@ -1,1 +1,303 @@
+body{
+    background-color: #0C1A1A;
+    font-family: "Press Start 2P",serif;
+    text-align: center;
+    color: #6ACFC7;
+}
 
+header{
+    height: 20vh;
+    margin: 10px;
+    padding: 5px;
+    background-color: #0C1A1A;
+    border-radius: 10px;
+}
+
+#logo-335{
+    height: 85%;
+    text-align: center;
+    font-size: 5vw;
+}
+
+#menu-container{
+    display : flex;
+    justify-content: flex-start;
+    text-align: center;
+}
+
+
+#menu-container > div{
+    height: 10px;
+    width: 11vw;
+    border-radius: 10px;
+    background-color: #6ACFC7;
+    margin-top: 5px;
+    margin-left: 5.5vw;
+    margin-right: 5.5vw;
+    padding: 2px;
+    text-align: center;
+}
+
+
+#menu-container > div:hover{
+    height: 25vh;
+    width: 25vw;
+    border-radius: 10px;
+    background-color: #0C1A1A;
+    margin-top: 5px;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    padding: 2px;
+    text-align: center;
+    z-index: 1;
+    box-shadow: 0 0 11px rgba(33,33,33,.7);
+    transition-property: height, width;
+    transition-duration: 100ms, 100ms;
+    transition-timing-function: linear;
+    transition-delay: 0s, 0s;
+
+    .hidden{
+        display: block;
+    }
+    .aligner {
+        display: block;
+        align-items: center;
+        justify-content: center;
+        font-size: auto;
+    }
+}
+
+.menu-list::before{
+    width : 8vw;
+    margin-left: 7pw;
+    margin-right: auto;
+    content: 'menu';
+}
+
+.menu-list:hover{
+    content: 'close';
+    z-index: 1;
+    .hidden{
+        display: block;
+    }
+    #menu-bar{
+        height: 50vh;
+        width: 25vw;
+        border-radius: 10px;
+        background-color: rgb(105, 16, 16);
+        margin-top: 5px;
+        margin-left: 0vw;
+        margin-right: 0vw;
+        padding: 2px;
+        text-align: center;
+        box-shadow: 0 0 11px rgba(33,33,33,.7);
+        transition-property: height, width;
+        transition-duration: 200ms, 200ms;
+        transition-timing-function: linear;
+        transition-delay: 100ms, 100ms;
+    }
+    ul{
+        list-style-type: none;
+    }
+}
+
+.hidden{
+    display: none;
+}
+
+.circle {
+    width: 7vw;
+    height: 7vw;
+    margin: 0.5vw 9vw 1vw 9vw;
+    background-color: #f00;
+    border-radius: 50%; /* Make it a circle */
+}
+
+a{
+    text-decoration: none;
+    color: inherit; /* Use inherited color instead of blue */
+}
+
+
+:root {
+    --card-height: 40vw;
+    --card-margin: 4vw;
+    --card-top-offset: 1em;
+    --numcards: 6;
+    --outline-width: 0px;
+}
+  
+#cards {
+    padding-bottom: calc(var(--numcards) * var(--card-top-offset)); /* Make place at bottom, as items will slide to that position*/
+    margin-bottom: var(--card-margin); /* Don't include the --card-margin in padding, as that will affect the scroll-timeline*/
+}
+  
+#card_1 {
+    --index: 1;
+    background-color: #0C1A1A;
+}
+  
+#card_2 {
+    --index: 2;
+    background-color: #0C1A1A;
+}
+  
+#card_3 {
+    --index: 3;
+    background-color: #0C1A1A;
+}
+  
+#card_4 {
+    --index: 4;
+    background-color: #0C1A1A;
+}
+
+#card_5 {
+    --index: 5;
+    background-color: #0C1A1A;
+}
+
+#card_6 {
+    --index: 6;
+    background-color: #0C1A1A;
+}
+  
+.card {
+    position: sticky;
+    top: 0;
+    padding-top: calc(var(--index) * var(--card-top-offset));
+    margin: auto;
+}
+
+
+@supports (animation-timeline: view()) {
+    .card {
+        --index0: calc(var(--index) - 1); /* 0-based index */
+        --reverse-index: calc(var(--numcards) - var(--index0)); /* reverse index */
+        --reverse-index0: calc(var(--reverse-index) - 1); /* 0-based reverse index */
+    }
+
+    @keyframes scale {
+        to {
+            transform:
+                scale(calc(1.1 - calc(0.1 * var(--reverse-index))));
+        }
+    }
+
+    #cards {
+        --numcards: 6;
+        view-timeline-name: --cards-element-scrolls-in-body;
+    }
+
+    .card__content {
+        --start-range: calc(var(--index0) / var(--numcards) * 100%);
+        --end-range: calc((var(--index)) / var(--numcards) * 100%);
+
+        animation: linear scale forwards;
+        animation-timeline: --cards-element-scrolls-in-body;
+        animation-range: exit-crossing var(--start-range) exit-crossing var(--end-range);
+    }
+}
+  
+#cards {
+    list-style: none;
+    outline: calc(var(--outline-width) * 10) solid blue; 
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(var(--numcards), var(--card-height));
+    gap: var(--card-margin);
+}
+  
+.card {
+    outline: var(--outline-width) solid hotpink;
+}
+  
+.card__content {
+    box-shadow: 0 0.2em 1em rgba(0, 0, 0, 0.1), 0 1em 2em rgba(0, 0, 0, 0.1);
+    background: #d4ebeb;
+    color: #173331;
+    border-radius: 1em;
+    overflow: hidden;
+
+    display: grid;
+    grid-template-areas: "text img";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+
+    align-items: stretch;
+    outline: var(--outline-width) solid lime;
+}
+  
+.card__content > div {
+    grid-area: text;
+    width: 80%;
+    place-self: center;
+    text-align: left;
+    display: grid;
+    gap: 1em;
+    place-items: start;
+}
+  
+.card__content > figure {
+    grid-area: img;
+    overflow: hidden;
+}
+
+.card__content > figure > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+  
+h1 {
+    font-weight: 300;
+    font-size: 3.5em;
+}
+
+h2 {
+    font-weight: 300;
+    font-size: 2.5em;
+}
+
+p {
+    font-weight: 300;
+    line-height: 1.42;
+}
+  
+.btn {
+    background: rgb(188 87 36);
+    color: rgb(200, 13, 13);
+    text-decoration: none;
+    display: inline-block;
+    padding: 0.5em;
+    border-radius: 0.25em;
+}
+  
+aside {
+    width: 50vw;
+    margin: 0 auto;
+    text-align: left;
+}
+  
+aside p {
+    margin-bottom: 1em;
+}
+
+main{
+    margin: 10px;
+    padding: 10px;
+    min-height: 70vb;
+    border-radius: 10px;
+    background-color:#0C1A1A;
+    box-sizing: border-box;
+}
+
+footer{
+    margin: 10px;
+    padding: 10px;
+    height: 10vb;
+    border-radius: 5px;
+    background-color: #0C1A1A;
+    text-align: center;
+    text-decoration: solid;
+}

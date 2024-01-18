@@ -1,0 +1,100 @@
+canvas {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}
+body{
+    font-family: "Source Code Pro";
+}
+
+#page-layout{
+    height: auto;
+    width: 90vw;
+    margin-top: 50px;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 100px;
+    position: absolute;
+    z-index: 2;
+    background-color: rgba(12, 26, 26, .6) ;
+    filter: alpha(opacity=60);
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(24, 24, 23, 0.9);
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: auto auto ;
+    grid-template-rows: auto auto auto auto;
+    gap: 10px;
+    padding: 10px;
+
+}
+
+.grid-item {
+    background-color: rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    padding: .3vw;
+    font-size: 30px;
+    text-align: center;
+}
+
+.item1 {
+    grid-column: 1 / span2;
+    grid-row: 1;
+    margin: 1vw;
+    height: 8vh;
+}
+
+.item2 {
+    height: 20vw;
+    width: 20vw;
+    grid-column: 1;
+    grid-row: 2;
+    margin: 1vw;
+}
+
+.item3 {
+    height: 80vh;
+    width: 64vw;
+    grid-column: 2;
+    grid-row: 2 / span3;
+    margin: 1vw;
+}
+
+.item4 {
+    grid-column: 1;
+    grid-row: 3;
+    margin: 1vw;
+    height: 34vh;
+}
+
+.item5 {
+    grid-column: 1 / span2;
+    grid-row: 4;
+    margin: 1vw;
+    height: 8vh;
+}
+.profile-img > img{
+    border-radius: 15px;
+    height: 20vw;
+    width: 20vw;
+}
+.left-place{
+    position: relative;
+    left: auto;
+    font-size: 60px;
+    align-items:first baseline;
+}
+a{
+    text-decoration: none;
+    color: inherit; /* Use inherited color instead of blue */
+}
+
+.shed:hover{
+    font-size: 35px;
+    font-weight: bold;
+}
