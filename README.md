@@ -22,6 +22,11 @@ This repository houses a collection of my small-scale coding projects, spanning 
     > ![Game of Life Preview](https://github.com/1820ANKIT2029/PROJECT_1820/assets/100723495/37950408-ebbc-4a2d-b299-61c9b9b4d94b)
     > https://github.com/1820ANKIT2029/PROJECT_1820/assets/100723495/9944c42c-cc13-4724-bad4-ad0329c645bf
 
+4. ✨ **ROOM 335**
+    - website presenting room 335 of SVBH MNNIT ALLAHABAD, PRAYAGRAJ
+    - Created Html, Css, Javascript
+    - WEBSITE [HERE](https://1820ankit2029.github.io/PROJECT1820/ROOM335/index.html)
+
 **Happy coding!**
 
 **- Ankit**
