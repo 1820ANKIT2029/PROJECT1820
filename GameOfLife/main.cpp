@@ -6,7 +6,7 @@ using namespace std;
 
 int main(){
     // change array name for different patterns
-    int size = sizeof(Ankit_kumar[0]);
+    int size = sizeof(shifter[0]);
 
     char **a;
     a = new char*[size];
@@ -15,7 +15,7 @@ int main(){
     }
     for(int i=0; i<size; i++){
         for(int j=0; j<size; j++){
-            a[i][j] = Ankit_kumar[i][j]; // change array name for different patterns
+            a[i][j] = shifter[i][j]; // change array name for different patterns
         }
     }
     GameOfLife area38(a, size-2);

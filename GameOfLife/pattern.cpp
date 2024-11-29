@@ -150,3 +150,16 @@ char Ankit_kumar[65][65] = {
     {b,b,b,b,b,b,b,b,b,b,b,b,b,b,b,b,b,b,b,b,b,b,b,b,b,b,b,b,b,b,b,b,b,b,b,b,b,b,b,b,b,b,b,b,b,b,b,b,b,b,b,b,b,b,b,b,b,b,b,b,b,b,b,b,b},
 
 };
+
+char shifter[10][20] = {
+    {b, b, b, b, b, b, b, b, b, b, b, b, b, b, b, b, b, b, b, b},
+    {b, b, b, b, b, b, b, s, b, b, b, b, b, b, b, b, b, b, b, b},
+    {b, b, b, b, b, b, s, b, s, b, b, b, b, b, b, b, b, b, b, b},
+    {b, b, b, b, b, s, b, b, b, s, b, b, b, b, b, b, b, b, b, b},
+    {b, b, b, b, s, b, s, b, s, b, s, b, b, b, b, b, b, b, b, b},
+    {b, b, b, s, b, b, b, b, b, b, b, s, b, b, b, b, b, b, b, b},
+    {b, b, s, b, s, b, b, b, b, b, s, b, s, b, b, b, b, b, b, b},
+    {b, s, b, b, b, s, b, b, b, s, b, b, b, s, b, b, b, b, b, b},
+    {s, b, s, b, s, b, s, b, s, b, s, b, s, b, s, b, b, b, b, b},
+    {b, b, b, b, b, b, b, b, b, b, b, b, b, b, b, b, b, b, b, b}
+};
